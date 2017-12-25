@@ -1,0 +1,13 @@
+F:\Solutions\Sale\Quay so trung thuong (Winform)\QuaySoTrungThuong\bin\Debug\QuaySoTrungThuong.exe
+F:\Solutions\Sale\Quay so trung thuong (Winform)\QuaySoTrungThuong\bin\Debug\QuaySoTrungThuong.pdb
+F:\Solutions\Sale\Quay so trung thuong (Winform)\QuaySoTrungThuong\obj\Debug\QuaySoTrungThuong.Form1.resources
+F:\Solutions\Sale\Quay so trung thuong (Winform)\QuaySoTrungThuong\obj\Debug\QuaySoTrungThuong.Properties.Resources.resources
+F:\Solutions\Sale\Quay so trung thuong (Winform)\QuaySoTrungThuong\obj\Debug\QuaySoTrungThuong.csproj.GenerateResource.Cache
+F:\Solutions\Sale\Quay so trung thuong (Winform)\QuaySoTrungThuong\obj\Debug\QuaySoTrungThuong.exe
+F:\Solutions\Sale\Quay so trung thuong (Winform)\QuaySoTrungThuong\obj\Debug\QuaySoTrungThuong.pdb
+D:\YearEnd\Quay so trung thuong (Winform)\Quay so trung thuong (Winform)\QuaySoTrungThuong\obj\Debug\QuaySoTrungThuong.exe
+D:\YearEnd\Quay so trung thuong (Winform)\Quay so trung thuong (Winform)\QuaySoTrungThuong\obj\Debug\QuaySoTrungThuong.pdb
+D:\YearEnd\Quay so trung thuong (Winform)\Quay so trung thuong (Winform)\QuaySoTrungThuong\obj\Debug\QuaySoTrungThuong.csprojResolveAssemblyReference.cache
+D:\YearEnd\Quay so trung thuong (Winform)\Quay so trung thuong (Winform)\QuaySoTrungThuong\obj\Debug\QuaySoTrungThuong.Form1.resources
+D:\YearEnd\Quay so trung thuong (Winform)\Quay so trung thuong (Winform)\QuaySoTrungThuong\obj\Debug\QuaySoTrungThuong.Properties.Resources.resources
+D:\YearEnd\Quay so trung thuong (Winform)\Quay so trung thuong (Winform)\QuaySoTrungThuong\obj\Debug\QuaySoTrungThuong.csproj.GenerateResource.Cache
