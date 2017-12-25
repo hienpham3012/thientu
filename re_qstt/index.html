@@ -1,0 +1,188 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>THIENTU TETECOMMUNICATION SERVICE TRADING COMPANY</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
+
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+		
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.slotmachine.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="header" class = "container" >
+			
+			<div class="row content">
+				<div class="col-md-12 col-lg-12 text-center">
+                    <div class="col-md-3 col-lg-3 col-sm-4" style="display: inline-block; padding: 0px 15px">
+                      	<p><img src="TTU-logo.jpg" width="100%" alt="Logo" /></p>
+                     </div>
+                     <div class="col-md-9 col-lg-9 col-sm-8">
+                      	<p> THIENTU TELECOMMUNICATION SERVICES TRADING COMPANY</p>
+                   
+						<div id="textMachine">
+							<div style="color: yellow">LUCKY DRAW NUMBERS</div>
+						</div>
+					</div>
+					<script>
+						$(document).ready(function(){
+							$("#textMachine").slotMachine({
+								active	: 1,
+								delay	: 450,
+								auto	: 1500
+							});
+						});
+					</script>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="line">
+			<div class="container-fluid">
+				<div class="row parent">
+					<div class="col-md-2">
+						<div id="slotMachineButton1" class="slotMachineButton"><p>START</p></div>
+					</div>
+					<div class="col-md-10  ">
+						<h2 >Lucky Number: <span id="machineResult"></span></h2>
+					</div>
+				</div>
+			</div>
+			<div class="content container-fluid" style="text-align: center">			
+				
+				<div class="row">
+					<div class="col-xs-12 col-md-12 machineContainer">
+						<div id="machine1" class="slotMachine">
+						    <div class="slot slot0"></div>
+							<div class="slot slot1"></div>
+							<div class="slot slot2"></div>
+							<div class="slot slot3"></div>
+							<div class="slot slot4"></div>
+							<div class="slot slot5"></div>
+							<div class="slot slot6"></div>
+							<div class="slot slot7"></div>
+							<div class="slot slot8"></div>
+							<div class="slot slot9"></div>
+						</div>
+						
+						<div id="machine2" class="slotMachine">
+							 <div class="slot slot0"></div>
+							<div class="slot slot1"></div>
+							<div class="slot slot2"></div>
+							<div class="slot slot3"></div>
+							<div class="slot slot4"></div>
+							<div class="slot slot5"></div>
+							<div class="slot slot6"></div>
+							<div class="slot slot7"></div>
+							<div class="slot slot8"></div>
+							<div class="slot slot9"></div>
+						</div>
+						
+						<div id="machine3" class="slotMachine">
+							 <div class="slot slot0"></div>
+							<div class="slot slot1"></div>
+							<div class="slot slot2"></div>
+							<div class="slot slot3"></div>
+							<div class="slot slot4"></div>
+							<div class="slot slot5"></div>
+							<div class="slot slot6"></div>
+							<div class="slot slot7"></div>
+							<div class="slot slot8"></div>
+							<div class="slot slot9"></div>
+						</div>
+						
+						<div id="machine1Result" class="col-xs-4 machineResult"></div>
+						<div id="machine2Result" class="col-xs-4 machineResult"> </div>
+						<div id="machine3Result" class="col-xs-4 machineResult"></div>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<script>
+			$(document).ready(function(){
+				var machine1 = $("#machine1").slotMachine({
+					active	: 0,
+					delay	: 1000
+				});
+				
+				var machine2 = $("#machine2").slotMachine({
+					active	: 1,
+					delay	: 1000
+				});
+				
+				var machine3 = $("#machine3").slotMachine({
+					active	: 2,
+					delay	: 1000
+				});
+				var str = "  "; 
+				
+				function onComplete(active){
+					switch(this.element[0].id){
+						case 'machine1':						
+							$("#machine1Result").text("First Number: "+this.active);	
+							str = str + this.active ; 
+							$("#machineResult").text(str);
+							break;
+						case 'machine2':
+							$("#machine2Result").text("Second Number: "+this.active);
+							str = str + this.active ; 
+							$("#machineResult").text(str);
+							break;
+						case 'machine3':
+							$("#machine3Result").text("Third Number: "+this.active);
+							str = str + this.active + "/"; 
+							$("#machineResult").text(str);
+							break;
+
+						$("#machineResult").text(str);
+
+					}
+				}
+				
+				$("#slotMachineButton1").click(function(){
+					
+						$("#machineResult").text(" ");
+					machine1.shuffle(5, onComplete);
+					
+					setTimeout(function(){
+						machine2.shuffle(5, onComplete);
+					}, 500);
+					
+					setTimeout(function(){
+						machine3.shuffle(5, onComplete);
+					}, 1000);
+					
+				})
+			});
+		</script>
+		
+		
+	
+		
+		
+		<div id="footer">
+			<div class="content">
+				<div id="textMachine2" style="text-align: center">
+					
+					
+					
+				</div>
+			
+			</div>
+		</div>
+
+
+
+	</body>
+</html>
