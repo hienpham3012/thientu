@@ -49,8 +49,13 @@
 			<div class="col-md-12 col-xs-12 col-sm-12">
 				<div class="col-md-2 col-sm-2 col-xs-12">
 					<div id="slotMachineButton1" class="slotMachineButton"><p>START</p></div>
+					
 				</div>
-				
+				<div class="hidden">
+					<video id="video" width="400" controls>
+						<source src="video/clip1.mp3" type="video/mp4">
+					</video>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -133,12 +138,12 @@
 			
 			var machine2 = $("#machine2").slotMachine({
 				active	: 1,
-				delay	: 1000
+				delay	: 1500
 			});
 			
 			var machine3 = $("#machine3").slotMachine({
 				active	: 2,
-				delay	: 1000
+				delay	: 2200
 			});
 			var str = "  "; 
 			
@@ -166,19 +171,22 @@
 			}
 			
 			$("#slotMachineButton1").click(function(){
-				
+				var myVideo = document.getElementById("video"); 
+				 myVideo.play();
+				 
 					$("#machineResult").text(" ");
 				machine1.shuffle(5, onComplete);
 				
 				setTimeout(function(){
 					machine2.shuffle(5, onComplete);
-				}, 500);
+				}, 1500 );/* clip1 4500*/
 				
 				setTimeout(function(){
 					machine3.shuffle(5, onComplete);
-				}, 1000);
+				}, 3000 );/* clip1 8000*/
 				
-			})
+			});
+			
 		});
 	</script>
 </body>
