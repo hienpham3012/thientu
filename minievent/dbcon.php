@@ -1,7 +1,18 @@
-<?php
-$_SESSION['start_time'] = time();
+ <?php
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "mini_game";
 
-$end_time = time();
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	} 
 
-$end_time - $_SESSION['start_time'] = 65 seconds (divide by 60 to get minutes);
-?>
+	   $sql = "UPDATE start SET value=0 WHERE id=1";
+    $result = $conn->query($sql);
+
+	/*$conn->close(); */
+?> 
