@@ -25,10 +25,13 @@ if ($conn->connect_error) {
             while($row = $result->fetch_assoc()) {
                 echo "<br> id: ". $row["id"]. " - Name: ". $row["name"]. " value" . $row["value"] . "<br>";
                 $_REQUEST = array('value' =>  $row["value"]);
+
                 	if($row["value"] =="1") {
                 		
                 		header('Location: result.html');
                 	}     
+    
+                    return $row; 
             }
         } else {
             echo "0 results";

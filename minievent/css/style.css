@@ -278,7 +278,10 @@ h2 #machineResult {
 	    height: 115px;
     overflow-y: auto;
 }
-
+.slogan {
+	    line-height: 5vw;
+    font-size: 3vw;
+}
 @media screen and (max-width: 767px) and (min-width: 469px) {
 	.slogan {
 		font-size: 28px;
