@@ -17,11 +17,14 @@
 				delay	: 450,
 				auto	: 1500
 			});
+			$("#slotMachineButton1").click();
 			$("#btn2").click(function(){
 				$("#slotMachineButton1").click();
 			});
 		});
 	</script>
+
+
 
 <!--[if lt IE 9]>
     <script src="/js/html5shiv.js"></script>
@@ -171,7 +174,7 @@
 				}
 			}
 			
-			$("#slotMachineButton1").click(function(){
+			
 				
 					$("#machineResult").text(" ");
 				machine1.shuffle(5, onComplete);
@@ -184,7 +187,7 @@
 					machine3.shuffle(5, onComplete);
 				}, 1000);
 				
-			})
+			
 		});
 	</script>
 </body>

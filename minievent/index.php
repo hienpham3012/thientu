@@ -9,6 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
   <script type="text/javascript" src="js/jquery.slotmachine.js"></script>
+
   <script>
 		$(document).ready(function(){
 			$("#textMachine").slotMachine({
@@ -25,24 +26,25 @@
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <![endif]-->
+ <?php
+					$servername = "localhost";
+					$username = "root";
+					$password = "";
+					$dbname = "mini_game";
+
+					// Create connection
+					$conn = new mysqli($servername, $username, $password, $dbname);
+					// Check connection
+					if ($conn->connect_error) {
+					    die("Connection failed: " . $conn->connect_error);
+					} 
+
+					$sql = "UPDATE start SET value=0 WHERE id=1";
+					$result = $conn->query($sql);
+					$conn->close();
+				?> 
 
 
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "mini_game";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-$sql = "UPDATE start SET value=1 WHERE id=1";
-$result = $conn->query($sql);
-$conn->close();
-?> 
 </head>
 <body>
 <header>
@@ -202,6 +204,7 @@ $conn->close();
 				setTimeout(function(){
 					machine3.shuffle(5, onComplete);
 				}, 1000);
+				
 			})
 		});
 	</script>

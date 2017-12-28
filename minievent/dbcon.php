@@ -1,16 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+$_SESSION['start_time'] = time();
 
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=mini_game", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully"; 
-    }
-catch(PDOException $e)
-    {
-    echo "Connection failed: " . $e->getMessage();
-    }
+$end_time = time();
+
+$end_time - $_SESSION['start_time'] = 65 seconds (divide by 60 to get minutes);
 ?>
