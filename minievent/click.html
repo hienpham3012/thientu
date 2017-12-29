@@ -17,8 +17,6 @@
 			  type: "POST",
 			  url: "add1.php",
 			  data: { name: "John" }
-			}).done(function( msg ) {
-			  	alert( "Bắt đầu quay: " + msg );
 			});    
 
 	    });
@@ -28,8 +26,6 @@
 			  type: "POST",
 			  url: "dbcon.php",
 			  data: { name: "John" }
-			}).done(function( msg ) {
-			  	alert( "Reset: " + msg );
 			});    
 
 	    });
@@ -47,12 +43,12 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12 col-xs-12 col-sm-12">
-				<div class="col-md-2 col-sm-2 col-xs-4">
+				<div class="col-md-2 col-sm-2 col-xs-6">
 					<div id="start" class="slotMachineButton"><p>START</p></div>
 					
 				</div>
-				<div class="col-md-2 col-sm-2 col-xs-4">
-					<div id="reset" class="slotMachineButton"><p>Reset</p></div>
+				<div class="col-md-2 col-sm-2 col-xs-6">
+					<div id="reset" class="slotMachineButton"><p>RESET</p></div>
 					
 				</div>
 			</div>

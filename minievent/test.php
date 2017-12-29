@@ -28,7 +28,7 @@ if ($conn->connect_error) {
 
                 	if($row["value"] =="1") {
                 		
-                		header('Location: result.html');
+                		header('Location: result.html #header');
                 	}     
     
                     return $row; 
