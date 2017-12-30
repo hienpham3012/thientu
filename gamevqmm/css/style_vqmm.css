@@ -1,0 +1,64 @@
+body {
+	overflow-x: hidden;
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+}
+.parent {
+	display: flex;
+}
+.parent > div {
+	margin: 0 auto;
+}
+.arrow {
+	z-index: 1;
+    margin-bottom: -32px;
+}
+.fa-arrow::before {
+	content: "\f000";
+	width: 100px;
+	height: 100px;
+	background-image: url(../images/arrow.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	font-family: FontAwesome;
+}
+.img-rotate {
+max-height: 450px;
+overflow: hidden;
+
+}
+.img-rotate img {
+	-webkit-transition: all 1s ease;
+-moz-transition: all 10s ease;
+-o-transition: all 10s ease;
+-ms-transition: all 10s ease;
+transition: all 10s ease;
+
+}
+.img-rotate img:hover {
+
+-webkit-transform: rotate(720deg);
+
+-moz-transform: rotate(720deg);
+
+-o-transform: rotate(720deg);
+
+-ms-transform: rotate(720deg);
+
+transform: rotate(720deg);
+
+}
+
+.rotate360 {
+	-webkit-animation-name: rotate360;
+	-moz-animation-name: rotate360;
+	-ms-animation-name: rotate360;
+	-o-animation-name: rotate360;
+	animation-name: rotate360;
+ 
+	-webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+	-ms-animation-duration: 2s;
+	-o-animation-duration: 2s;
+	animation-duration: 2s;
+}

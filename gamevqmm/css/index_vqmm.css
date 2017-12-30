@@ -1,0 +1,142 @@
+.play {
+    display: block;
+    float: left;
+    height: 725px;
+    padding: 0;
+    position: relative;
+    width: 725px;
+}
+.mm {
+    display: block;
+    height: 150px;
+    width: 150px;
+    
+    color: #FF0000;
+    transition: all 0.5s ease 0s;
+    text-align: center;
+    line-height: 30px;
+    font-size: 25px;
+}
+.mm.active {
+    background-color: #FF0000;
+    color: #0000FF;
+    transition: all 0.5s ease 0s;
+    font-size: 28px;
+}
+.mm.m1 {
+    left: 25px;
+    position: absolute;
+    top: 25px;
+}
+.mm.m2 {
+    left: 200px;
+    position: absolute;
+    top: 25px;
+}
+.mm.m3 {
+    left: 375px;
+    position: absolute;
+    top: 25px;
+}
+.mm.m4 {
+    right: 25px;
+    position: absolute;
+    top: 25px;
+}
+.mm.m5 {
+    right: 25px;
+    position: absolute;
+    top: 200px;
+}
+.mm.m6 {
+    right: 25px;
+    position: absolute;
+    top: 375px;
+}
+.mm.m7 {
+    right: 25px;
+    position: absolute;
+    bottom: 25px;
+}
+.mm.m8 {
+    left: 375px;
+    position: absolute;
+    bottom: 25px;
+}
+.mm.m9 {
+    left: 200px;
+    position: absolute;
+    bottom: 25px;
+}
+.mm.m10 {
+    left: 25px;
+    position: absolute;
+    bottom: 25px;
+}
+.mm.m11 {
+    left: 25px;
+    position: absolute;
+    top: 375px;
+}
+.mm.m12 {
+    left: 25px;
+    position: absolute;
+    top: 200px;
+}
+
+.m2 img {
+	transform: rotate(30deg);
+}
+.m3 img {
+	transform: rotate(60deg);
+}
+
+.m4 img {
+	transform: rotate(90deg);
+}
+
+.m5 img {
+	transform: rotate(120deg);
+}
+
+.m6 img {
+	transform: rotate(150deg);
+}
+
+.m7 img {
+	transform: rotate(180deg);
+}
+
+.m8 img {
+	transform: rotate(210deg);
+}
+
+.m9 img {
+	transform: rotate(240deg);
+}
+.m10 img {
+	transform: rotate(270deg);
+}
+.m11 img {
+	transform: rotate(300deg);
+}
+
+.m12 img {
+	transform: rotate(330deg);
+}
+
+.result img {
+width: 100%;
+
+    transform: rotate(-15deg);
+}
+.btnclick img {
+	margin-bottom: -25px;
+	z-index: 1;
+}
+.parent {
+	display: flex;
+} 
+.parent div {
+	margin: auto;
+}

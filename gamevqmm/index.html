@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags always come first -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="css/index_vqmm.css">
+	<script src="js/vqmm.js"></script>
+	<title>Game Vòng Quay May Mắn @ Thiên Tú </title>
+	
+	 <link rel="stylesheet" href="../lib/bootstrap-3.3.7/css/bootstrap.min.css">
+  <script src="../lib/bootstrap-3.3.7/js/jquery.min.js"></script>
+  <script src="../lib/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+ <script>
+    $(document).ready(function(){
+        var a = 0;
+        var b = 0;
+     
+        function wheel(d, c)
+        {
+            var e = $('ul.play').children().length;
+            var t = Math.floor((Math.random() * 3600) + 60);
+          
+            var f = t + c;
+           
+            setTimeout(function() {
+                $('ul.play li:eq(' + a + ')').addClass('active').siblings().removeClass('active');
+                $('.result').html($('ul.play .active').html());
+                //$('.result img').css("transform", "rotate("+ t +"deg)");
+                a++;
+                b++;
+                
+                if (a == e)
+                    a = 0;
+                if (b < f)
+                    wheel(d, c);             
+            }, d);
+        }
+     
+        wheel(50, 5); 
+    });
+</script>
+
+</head>
+<body>
+<header>
+
+</header>
+<section>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Chào Phạm Thị Thu Hiền</h3>
+			</div>
+		</div>
+		
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 ">
+
+				<ul class="play hidden">
+					<li class="mm m1"><img class="img-responsive" src="images/rotate/image001.png"  /></li>
+					<li class="mm m2"><img class="img-responsive" src="images/rotate/image002.png"  /></li>
+					<li class="mm m3"><img class="img-responsive" src="images/rotate/image003.png"  /></li>
+					<li class="mm m4"><img class="img-responsive" src="images/rotate/image004.png"  /></li>
+					<li class="mm m5"><img class="img-responsive" src="images/rotate/image005.png"  /></li>
+					<li class="mm m6"><img class="img-responsive" src="images/rotate/image006.png" /></li>
+					<li class="mm m7"><img class="img-responsive" src="images/rotate/image007.png"  /></li>
+					<li class="mm m8"><img class="img-responsive" src="images/rotate/image008.png"  /></li>
+					<li class="mm m9"><img class="img-responsive" src="images/rotate/image009.png"  /></li>
+					<li class="mm m10"><img class="img-responsive" src="images/rotate/image010.png"  /></li>
+					<li class="mm m11"><img class="img-responsive" src="images/rotate/image011.png"  /></li>
+					<li class="mm m12"><img class="img-responsive" src="images/rotate/image012.png"  /></li>
+				</ul>
+				<div class="col-md-12 text-center arrow" style="z-index: 10">
+						<div class="">
+							<a href="" class="btnclick"><img width="50px" src="images/arrow.png" /></a>
+						</div>
+					</div>
+				<div class="col-md-12 parent">
+					<div class="result col-md-6 col-sm-6"></div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</section>
+<footer>
+
+</footer>
+</body>
+</html>
