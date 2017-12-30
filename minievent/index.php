@@ -1,68 +1,68 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <title>Mini game Thiên Tú</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
-  <script type="text/javascript" src="js/jquery.slotmachine.js"></script>
+	<head>
+		<title>Mini game Thiên Tú</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	  <script type="text/javascript" src="js/jquery.slotmachine.js"></script>
+	  <script>
+			$(document).ready(function(){
+				$("#textMachine").slotMachine({
+					active	: 1,
+					delay	: 450,
+					auto	: 1500
+				});
 
-  <script>
-		$(document).ready(function(){
-			$("#textMachine").slotMachine({
-				active	: 1,
-				delay	: 450,
-				auto	: 1500
 			});
-		});
-	</script>
-
-<!--[if lt IE 9]>
-    <script src="/js/html5shiv.js"></script>
-  <![endif]-->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<![endif]-->
- <?php
-					$servername = "localhost";
-					$username = "root";
-					$password = "";
-					$dbname = "mini_game";
-
-					// Create connection
-					$conn = new mysqli($servername, $username, $password, $dbname);
-					// Check connection
-					if ($conn->connect_error) {
-					    die("Connection failed: " . $conn->connect_error);
-					} 
-
-					$sql = "UPDATE start SET value=0 WHERE id=1";
-					$result = $conn->query($sql);
-					$conn->close();
-				?> 
-
-
-</head>
+		</script>
+	
+	</head>
 <body>
-<header>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12 col-sm-12 col-xs-12 ">
-				<div class="col-md-3 col-sm-4 col-xs-12">
-					<img src="TTU-logo.jpg" class="logo" />
-				</div>
-				<div class="col-md-9 col-sm-8 col-xs-12 midd-div">
-					<div>
-						<h3 class="text-center cl-red slogan">THIENTU TELECOMMUNICATION SERVICES TRADING COMPANY</h3>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
+
+<?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "mini_game";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+  header("refresh: 17;");
+    $sql = "SELECT id, name, value FROM start";
+    $result = $conn->query($sql);
+
+
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+                echo "<br> id: ". $row["id"]. " - Name: ". $row["name"]. " value" . $row["value"] . "<br>";
+                $_REQUEST = array('value' =>  $row["value"]);
+
+                	if($row["value"] =="1") {
+                		<script>
+							$("#btn").click();
+                		</script>
+                		//header('Location: result.html #header');
+                	}     
+    
+                    return $row; 
+            }
+        } else {
+            echo "0 results";
+
+        }
+  
+$conn->close();
+?> 
 <section>
 	<div class="container-fluid">
 		<div class="row">
@@ -70,7 +70,6 @@
 				<div class="col-md-2 col-sm-2 col-xs-12">
 					<div id="slotMachineButton1" class="slotMachineButton"><p>START</p></div>
 				</div>
-				
 			</div>
 		</div>
 	</div>
@@ -132,15 +131,6 @@
 		</div>
 	</div>
 </section>
-<footer id="footer">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12 col-sm-12 col-xs-12 copyright">
-				<h6>COPYRIGHT @ THIEN TU COMPANY</h6>
-			</div>
-		</div>
-	</div>
-</footer>
 <script>
 		$(document).ready(function(){
 			var machine1 = $("#machine1").slotMachine({
@@ -178,23 +168,12 @@
 						break;
 
 					$("#machineResult").text(str);
-
 				}
 			}
 			
 			$("#slotMachineButton1").click(function(){
 				
-					$("#machineResult").text(" ");
-				machine1.shuffle(5, onComplete);
-				
-				setTimeout(function(){
-					machine2.shuffle(5, onComplete);
-				}, 500);
-				
-				setTimeout(function(){
-					machine3.shuffle(5, onComplete);
-				}, 1000);
-				$("#machineResult2").text(" ");
+				$("#machineResult").text(" ");
 				machine1.shuffle(5, onComplete);
 				
 				setTimeout(function(){
@@ -205,6 +184,7 @@
 					machine3.shuffle(5, onComplete);
 				}, 1000);
 				
+                event.preventDefault();
 			})
 		});
 	</script>
