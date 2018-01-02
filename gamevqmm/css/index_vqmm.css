@@ -130,9 +130,13 @@ width: 100%;
 
     transform: rotate(-15deg);
 }
+.btnclick {
+        margin-top: 15vw;
+    margin-right: -4vw;
+    z-index: 1;
+}
 .btnclick img {
-	margin-bottom: -25px;
-	z-index: 1;
+     transform: rotate(-90deg);
 }
 .parent {
 	display: flex;
