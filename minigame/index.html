@@ -44,21 +44,63 @@
 	</div>
 </header>
 <section>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12 col-xs-12 col-sm-12">
-				<div class="col-md-2 col-sm-2 col-xs-12">
-					<div id="slotMachineButton1" class="slotMachineButton"><p>START</p></div>
-					
-				</div>
-				<div class="hidden">
-					<video id="video" width="400" controls>
-						<source src="video/clip1.mp3" type="video/mp4">
-					</video>
-				</div>
-			</div>
-		</div>
-	</div>
+	 <div class="container-fluid">
+        <div class="row ">
+            <div class="col-md-12 col-xs-12 col-sm-12 ">
+                <div class="col-md-2 col-sm-2 col-xs-12 text-center">
+                    <button id="slotMachineButton1" class="slotMachineButton"><p>Start</p></button>
+                </div>
+                 <div class="col-md-2 col-sm-2 col-xs-12 text-center">
+                    <button id="giai3" type="button" value="3" class="slotMachineButton"><p>Giải 3</p></button>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-12 text-center">
+                    <button id="giai2" type="button" value="2" class="slotMachineButton"><p>Giải 2</p></button>
+                </div>
+                
+                 <div class="col-md-2 col-sm-2 col-xs-12 text-center">
+                    <button id="giai1" type="button" value="1" class="slotMachineButton"><p>Giải 1</p></button>
+                </div>
+                
+                 <div class="col-md-2 col-sm-2 col-xs-12 text-center">
+                    <button id="giai1000" type="button" value="1000" class="slotMachineButton"><p>Đặc biệt</p></button>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                	<form>
+					    <label class="radio-inline ">
+					      <input type="radio" name="optradio">Giải 1
+					    </label>
+					    <label class="radio-inline ">
+					      <input type="radio" name="optradio">Giải 2
+					    </label>
+					    <label class="radio-inline ">
+					      <input type="radio" name="optradio">Giải 3
+					    </label>
+					  </form>
+
+                </div>
+
+
+                <div class="">
+                    <video id="video0" width="400" controls>
+                        <source src="video/clip_0.mp3" type="video/mp4">
+                    </video>
+                     <video id="video3" width="400" controls>
+                        <source src="video/clip_3.mp3" type="video/mp4">
+                    </video>
+                     <video id="video2" width="400" controls>
+                        <source src="video/clip_2.mp3" type="video/mp4">
+                    </video>
+                     <video id="video1" width="400" controls>
+                        <source src="video/clip_1.mp3" type="video/mp4">
+                    </video>
+                     <video id="video1000" width="400" controls>
+                        <source src="video/clip_1000.mp3" type="video/mp4">
+                    </video>
+                </div>
+
+            </div>
+        </div>
+    </div>
 	<div class="container-fluid">
 		<div class="row result">
 			<div class="col-md-4 col-sm-4 col-xs-4">
@@ -170,8 +212,64 @@
 				}
 			}
 			
+			$('#giai3').click(function(){
+			 	var myVideo = document.getElementById("video3"); 
+				 myVideo.play();
+				 	$("#machineResult").text(" ");
+				machine1.shuffle(5, onComplete);
+				
+				setTimeout(function(){
+					machine2.shuffle(5, onComplete);
+				}, 1500 );/* clip1 4500*/
+				
+				setTimeout(function(){
+					machine3.shuffle(5, onComplete);
+				}, 3000 );/* clip1 8000*/
+			});
+			$('#giai2').click(function(){
+			 	var myVideo = document.getElementById("video2"); 
+				 myVideo.play();
+				 	$("#machineResult").text(" ");
+				machine1.shuffle(5, onComplete);
+				
+				setTimeout(function(){
+					machine2.shuffle(5, onComplete);
+				}, 1500 );/* clip1 4500*/
+				
+				setTimeout(function(){
+					machine3.shuffle(5, onComplete);
+				}, 3000 );/* clip1 8000*/
+			});
+			$('#giai1').click(function(){
+			 	var myVideo = document.getElementById("video1"); 
+				 myVideo.play();
+				 	$("#machineResult").text(" ");
+				machine1.shuffle(5, onComplete);
+				
+				setTimeout(function(){
+					machine2.shuffle(5, onComplete);
+				}, 1500 );/* clip1 4500*/
+				
+				setTimeout(function(){
+					machine3.shuffle(5, onComplete);
+				}, 3000 );/* clip1 8000*/
+			});
+			$('#giai1000').click(function(){
+			 	var myVideo = document.getElementById("video1000"); 
+				 myVideo.play();
+				 	$("#machineResult").text(" ");
+				machine1.shuffle(5, onComplete);
+				
+				setTimeout(function(){
+					machine2.shuffle(5, onComplete);
+				}, 1500 );/* clip1 4500*/
+				
+				setTimeout(function(){
+					machine3.shuffle(5, onComplete);
+				}, 3000 );/* clip1 8000*/
+			});
 			$("#slotMachineButton1").click(function(){
-				var myVideo = document.getElementById("video"); 
+				var myVideo = document.getElementById("video0"); 
 				 myVideo.play();
 				 
 					$("#machineResult").text(" ");
