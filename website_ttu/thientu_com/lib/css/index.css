@@ -1,0 +1,154 @@
+
+
+.navbar-nav>li>a {
+	padding-top: 22px;
+    padding-bottom: 22px;
+}
+.parent {
+	display: flex;
+}
+.parent > div, .parent > p {
+	padding: 0;
+	margin: 30px auto;
+}
+.parent > img {
+	padding: 0px;
+	margin: auto;
+}
+.text {
+	font-family: avenir-lt-w01_35-light1475496, sans-serif;
+}
+.size18 {
+	font-size: 18px;
+	line-height: normal;
+    letter-spacing: normal;
+}
+.size20 {
+	font-size: 20px;
+}
+.bg-red {
+	background-color: #d12026;
+}
+.bg-blue {
+	background-color: #1a5396;
+}
+.bg-white {
+	background-color: #fff;
+}
+#video_hoathinh {
+	height: 1200px;
+	position: relative;
+} 
+.insudtries {
+	position: relative;
+}
+/*
+.video {
+	position: absolute;
+	top: 0px;
+	transition: top 30px ease 1s;
+	z-index: -2;
+}*/
+.content-video {
+	position: absolute;
+	bottom: 0;
+}
+.container-fluid#video_hoathinh {
+	background: transparent;
+}
+.font_h4 {
+	font: normal normal normal 49px/1.4em helvetica-w01-light,helvetica-w02-light,sans-serif;
+	font-weight: bold;
+	margin: 101px 0px;
+}
+.font_h4 p {
+	    font-family: avenir-lt-w01_85-heavy1475544,sans-serif;
+}
+.text-white {
+	color: #fff
+}
+
+/* --------------  */
+.parallax {
+	position: relative;
+	display: flex;
+}
+
+.parallax#img2 {
+	height: 800px;
+}
+.parallax#img2 .parent > img {
+	margin: auto
+}
+#img2 .parallax-bg {
+	background-image: url("../../image/slide4.webp");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	height: 800px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	z-index: -1;
+}
+#img2 .parallax-content {
+	z-index: 0
+}
+
+.gallary {
+	height: 920px;
+	background-color: #fff;
+	position: relative;
+}
+.gallary .bg {
+	background-color: #1a5396;
+	height: 56%;
+}
+.gallary .gallary-list {
+	position: absolute;
+	top: 20%;
+	left: 0px;
+	margin: 0px 30px;
+}
+.gallary-item {
+	padding: 0px 10px;
+}
+.gallary-item img {
+	width: 100%;
+	padding: 10px 0px;
+}
+.gallary .gallary-list .title {
+	font-size: 51px;
+	font-weight: bold;
+	color: #fff;
+}
+.contact-us {
+	background-color: #1a5396;
+	padding: 45px 0px;
+}
+.contact-us .title {
+	color: rgb(247, 166, 45);
+	font-size: 35px;
+}
+.contact-us .btn-danger {
+	background-color: #ff0600;
+}
+.contact-us .btn-danger:hover {
+	background-color: rgba(247, 167, 46, 1);
+	border: solid 1px rgba(247, 167, 46, 1)
+}
+.megamenu {
+	background-color: #fff;
+	height: 101px;
+	padding: 15px 0px;
+	width: 100%;
+	overflow: hidden;
+}
+.megamenu img {
+	max-width: 101px;
+	display: block;
+    float: right;
+    max-height: 100%;
+}
+#megamenu .carousel-inner>.item>a>img, #megamenu .carousel-inner>.item>img, #megamenu .img-responsive, #megamenu .thumbnail a>img, #megamenu .thumbnail>img {
+	max-width: 101px
+}

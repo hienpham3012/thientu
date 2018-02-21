@@ -1,0 +1,26 @@
+.navbar-nav>li>a {
+	padding-top: 22px;
+    padding-bottom: 22px;
+}
+.parent {
+	display: flex;
+}
+.parent > div {
+	padding: 0;
+	margin: 30px auto;
+}
+.text {
+	font-family: avenir-lt-w01_35-light1475496, sans-serif;
+}
+.size18 {
+	font-size: 18px;
+	line-height: normal;
+    letter-spacing: normal;
+}
+.bg-red {
+	background-color: #d12026;
+}
+.bg-blue {
+	background-color: #1a5396;
+}
+ 
