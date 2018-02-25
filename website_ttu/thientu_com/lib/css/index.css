@@ -15,6 +15,9 @@
 	padding: 0px;
 	margin: auto;
 }
+.parallax-content.parent {
+	height: 100%;
+}
 .text {
 	font-family: avenir-lt-w01_35-light1475496, sans-serif;
 }
@@ -35,24 +38,11 @@
 .bg-white {
 	background-color: #fff;
 }
-#video_hoathinh {
-	height: 1200px;
-	position: relative;
-} 
+
 .insudtries {
 	position: relative;
 }
-/*
-.video {
-	position: absolute;
-	top: 0px;
-	transition: top 30px ease 1s;
-	z-index: -2;
-}*/
-.content-video {
-	position: absolute;
-	bottom: 0;
-}
+
 .container-fluid#video_hoathinh {
 	background: transparent;
 }
@@ -152,3 +142,73 @@
 #megamenu .carousel-inner>.item>a>img, #megamenu .carousel-inner>.item>img, #megamenu .img-responsive, #megamenu .thumbnail a>img, #megamenu .thumbnail>img {
 	max-width: 101px
 }
+
+/* video parallax */
+#overlay {
+background-color:rgba(0,0,0,.65);
+height:100%;
+left:0;
+position:relative;
+top:0;
+transition:background-color 300ms ease;
+width:100%;
+}
+
+.fade { background-color:rgba(0,0,0,.85) !important; }
+
+
+/* Hero Video + Fallback */
+
+#hero-vid {
+backface-visibility:hidden;
+background:url("http://www.markhillard.com/sandbox/media/polina.jpg") no-repeat scroll 0 0 #000;
+background-size:cover;
+bottom:0;
+height:auto;
+min-height:100%;
+min-width:100%;
+perspective:1000;
+position:fixed;
+right:0;
+width:auto;
+z-index:-1;
+}
+
+#hero-pic {
+display:block;
+height:auto;
+width:100%;
+}
+
+#state {
+bottom:0;
+cursor:pointer;
+font-size:2.25rem;
+left:0;
+line-height:1;
+padding:2rem 2.5rem 1.65rem;
+position:absolute;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width:768px) {
+    #overlay { height:auto; }
+}
+
+
+/* Visibility Helpers */
+
+@media only screen and (min-width:769px) {
+    .visible-mobile,.visible-tablet,.hidden-desktop { display:none !important; }
+}
+
+@media only screen and (min-width:480px) and (max-width:768px) {
+    .visible-mobile,.hidden-tablet,.visible-desktop { display:none !important; }
+}
+
+@media only screen and (max-width:479px) {
+    .hidden-mobile,.visible-tablet,.visible-desktop { display:none !important; }
+}
+
+/* /video parallax */
